@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import {art} from "../stores/art";
+</script>
+
+<h1 class="text-5xl">Matt R</h1>
+
+{#each $art as item }
+    <span>{item.title}</span>
+    <span>{item.credit_line}</span>
+{/each}
