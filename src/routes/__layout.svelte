@@ -2,6 +2,10 @@
 import '../styles/tailwind.css'
 </script>
 
+<svelte:head>
+    <title>matt r</title>
+</svelte:head>
+
 
 <slot></slot>
 
