@@ -1,15 +1,20 @@
 <script>
-import Nav from '../components/Navbar.svelte'
 import '../styles/tailwind.css'
 </script>
 
-<Nav/>
 
 <slot></slot>
 
 <style global lang="postcss">
+    
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
+
+    body {
+        @apply bg-red-50;
+    }
+
+
 </style>
 

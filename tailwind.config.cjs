@@ -8,7 +8,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lato: [ 'Lato']
+      } 
+    },
   },
   variants: {},
   plugins: [],
