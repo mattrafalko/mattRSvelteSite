@@ -26,6 +26,7 @@
 		<div>
 			<div class="mb-16">
 				<h1>matt rafalko</h1>
+				<span class="text-sm text-green-700 dark:text-green-50 font-bree">software engineer</span>
 			</div>
 			<ul class="space-y-4 w-24 h-24">
 				{#if ready}
