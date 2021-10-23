@@ -1,5 +1,5 @@
 <script>
-	import {slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	const links = [
 		{
 			name: 'email',
@@ -21,19 +21,31 @@
 	onMount(() => (ready = true));
 </script>
 
-<div class="mx-auto max-w-5xl font-lato text-red-300 px-10 md:px-0 ">
+<div class="mx-auto max-w-5xl   px-10 md:px-0 ">
 	<div class="flex flex-col place-content-center h-screen">
 		<div>
-			<h1 class="text-4xl font-black italic mb-16">matt rafalko</h1>
-			{#if ready}
-				<ul class="space-y-4 w-24">
+			<div class="mb-16">
+				<h1>matt rafalko</h1>
+			</div>
+			<ul class="space-y-4 w-24 h-24">
+				{#if ready}
 					{#each links as link}
-						<li transition:slide="{{duration: 1250}}" class="font-semibold text-xl hover:text-red-200">
+						<li transition:slide={{ duration: 1250 }}>
 							<a href={link.url} target="_blank">{link.name}</a>
 						</li>
 					{/each}
-				</ul>
-			{/if}
+				{/if}
+			</ul>
 		</div>
 	</div>
 </div>
+
+<style>
+	h1 {
+		@apply text-6xl tracking-widest font-bree text-green-700 dark:text-green-50;
+	}
+
+	li {
+		@apply font-semibold text-xl tracking-wider text-green-700 dark:text-green-50 hover:text-green-400 hover:drop-shadow-xl  font-bree;
+	}
+</style>

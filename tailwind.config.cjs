@@ -6,11 +6,12 @@ module.exports = {
     // may also want to include HTML files
     "./src/**/*.html"
   ],
-  darkMode: 'class',
+  darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {
-        lato: [ 'Lato']
+        lato: [ 'Lato'],
+        bree: ['"Bree Serif"']
       } 
     },
   },

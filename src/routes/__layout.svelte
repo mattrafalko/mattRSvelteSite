@@ -16,7 +16,8 @@ import '../styles/tailwind.css'
     @tailwind utilities;
 
     body {
-        @apply bg-red-50;
+        /* @apply bg-black; */
+        @apply bg-green-100 dark:bg-black;
     }
 
 
