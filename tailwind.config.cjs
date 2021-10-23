@@ -10,7 +10,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lato: [ 'Lato'],
         bree: ['"Bree Serif"']
       } 
     },
