@@ -32,7 +32,7 @@
 				{#if ready}
 					{#each links as link}
 						<li transition:slide={{ duration: 1250 }}>
-							<a href={link.url} target="_blank">{link.name}</a>
+							<a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
 						</li>
 					{/each}
 				{/if}
