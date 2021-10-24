@@ -21,14 +21,14 @@
 	onMount(() => (ready = true));
 </script>
 
-<div class="mx-auto max-w-5xl   px-10 md:px-0 ">
-	<div class="flex flex-col place-content-center h-screen">
+<div class="mx-auto max-w-5xl px-10 ">
+	<div class="flex flex-col place-content-center  h-screen">
 		<div>
 			<div class="mb-16">
 				<h1>matt rafalko</h1>
 				<span class="text-sm text-green-700 dark:text-green-50 font-bree">software engineer</span>
 			</div>
-			<ul class="space-y-4 w-24 h-24">
+			<ul class="space-y-4 w-24 h-56">
 				{#if ready}
 					{#each links as link}
 						<li transition:slide={{ duration: 625 }}>
@@ -47,6 +47,6 @@
 	}
 
 	li {
-		@apply font-semibold text-xl tracking-wider text-green-700 dark:text-green-50 hover:text-green-400 font-bree;
+		@apply font-semibold text-xl tracking-wider antialiased text-green-700 dark:text-green-50 hover:text-green-400 font-bree;
 	}
 </style>
