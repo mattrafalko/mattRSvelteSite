@@ -21,12 +21,12 @@
 	onMount(() => (ready = true));
 </script>
 
-<div class="mx-auto max-w-5xl px-10 ">
+<div>
 	<div class="flex flex-col place-content-center  h-screen">
 		<div>
 			<div class="mb-16">
 				<h1>matt rafalko</h1>
-				<span class="text-sm text-green-700 dark:text-green-50 font-bree">software engineer</span>
+				<span class="text-sm">software engineer</span>
 			</div>
 			<ul class="space-y-4 w-24 h-56">
 				{#if ready}
@@ -42,11 +42,8 @@
 </div>
 
 <style>
-	h1 {
-		@apply text-6xl tracking-widest font-bree text-green-700 dark:text-green-50;
-	}
 
 	li {
-		@apply font-semibold text-xl tracking-wider antialiased text-green-700 dark:text-green-50 hover:text-green-400 font-bree;
+		@apply text-xl tracking-wider hover:text-green-400;
 	}
 </style>
