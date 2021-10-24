@@ -47,6 +47,6 @@
 	}
 
 	li {
-		@apply font-semibold text-xl tracking-wider text-green-700 dark:text-green-50 hover:text-green-400 hover:drop-shadow-xl  font-bree;
+		@apply font-semibold text-xl tracking-wider text-green-700 dark:text-green-50 hover:text-green-400 font-bree;
 	}
 </style>

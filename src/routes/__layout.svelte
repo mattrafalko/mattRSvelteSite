@@ -1,11 +1,16 @@
 <script>
 import '../styles/tailwind.css'
+import SvelteSeo from 'svelte-seo'
 </script>
 
 <svelte:head>
     <title>matt r</title>
 </svelte:head>
 
+<SvelteSeo
+    title="matt r"
+    description="matt rafalko - software engineer"
+/>
 
 <slot></slot>
 
