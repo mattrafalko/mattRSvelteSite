@@ -31,7 +31,7 @@
 			<ul class="space-y-4 w-24 h-24">
 				{#if ready}
 					{#each links as link}
-						<li transition:slide={{ duration: 1250 }}>
+						<li transition:slide={{ duration: 625 }}>
 							<a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
 						</li>
 					{/each}
