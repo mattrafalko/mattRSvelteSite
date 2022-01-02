@@ -22,11 +22,12 @@
 </script>
 
 <div>
-	<div class="flex flex-col place-content-center  h-screen">
+	<div class="flex flex-col place-content-center h-screen">
 		<div>
-			<div class="mb-16">
+			<div class="mb-16 space-y-4">
 				<h1>matt rafalko</h1>
-				<span class="text-sm">software engineer</span>
+				<span class="text-sm block">software engineer</span>
+				<span class="text-sm">let's build together</span>
 			</div>
 			<ul class="space-y-4 w-24 h-56">
 				{#if ready}
