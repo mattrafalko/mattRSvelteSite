@@ -16,12 +16,15 @@
 	@tailwind components;
 	@tailwind utilities;
 
+	html {
+		min-height: calc(100% + env(safe-area-inset-top));
+		padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+			env(safe-area-inset-left);
+	}
+
 	body {
 		/* @apply bg-black; */
 		@apply bg-green-100 dark:bg-black font-bree text-green-700 dark:text-green-50 antialiased mx-auto max-w-5xl;
-		padding: env(safe-area-inset-right) env(safe-area-inset-left);
-		viewport-fit: cover;
-		min-height: -webkit-fill-available;
 	}
 
 	h1 {
