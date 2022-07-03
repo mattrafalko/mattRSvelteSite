@@ -1,5 +1,5 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	const links = [
 		{
 			name: 'email',
@@ -18,33 +18,28 @@
 	import { onMount } from 'svelte';
 
 	let ready = false;
+
 	onMount(() => (ready = true));
 </script>
 
-<div>
-	<div class="flex flex-col place-content-center h-screen">
-		<div>
-			<div class="mb-16 space-y-4">
-				<h1>matt rafalko</h1>
-				<span class="text-sm block">software engineer</span>
-				<span class="text-sm">let's build together</span>
-			</div>
-			<ul class="space-y-4 w-24 h-56">
-				{#if ready}
-					{#each links as link}
-						<li transition:slide={{ duration: 625 }}>
-							<a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
-						</li>
-					{/each}
-				{/if}
-			</ul>
+{#if ready}
+	<div class="m-auto px-10 sm:px-0">
+		<div class="mb-8 space-y-4">
+			<h1>matt rafalko</h1>
+			<span class="text-sm ">software engineer &#9679; let's build together</span>
 		</div>
+		<ul class="space-y-4 w-24 h-56">
+			{#each links as link}
+				<li transition:fly={{ y: -35, duration: 1500 }}>
+					<a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
+				</li>
+			{/each}
+		</ul>
 	</div>
-</div>
+{/if}
 
 <style>
-
 	li {
-		@apply text-xl tracking-wider hover:text-green-400;
+		@apply text-xl tracking-wider hover:text-green-400 transition-colors;
 	}
 </style>
