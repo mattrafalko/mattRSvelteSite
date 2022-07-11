@@ -26,7 +26,7 @@
 	<div class="m-auto px-10 sm:px-0">
 		<div transition:fade class="mb-8 space-y-4">
 			<h1>matt rafalko</h1>
-			<span class="text-sm ">software engineer &#9679; let's build together</span>
+			<span class="text-sm ">software engineer &middot; let's build together</span>
 		</div>
 		<ul class="space-y-4 w-24 h-56">
 			{#each links as link}
