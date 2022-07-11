@@ -29,8 +29,8 @@
 			<span class="text-sm ">software engineer &middot; let's build together</span>
 		</div>
 		<ul class="space-y-4 w-24 h-56">
-			{#each links as link}
-				<li transition:fly={{ y: -35, duration: 1500 }}>
+			{#each links as link, i}
+				<li transition:fly={{ y: -35, duration: 1500, delay: 250 * i }}>
 					<a href={link.url} target="_blank" rel="noreferrer">{link.name}</a>
 				</li>
 			{/each}
