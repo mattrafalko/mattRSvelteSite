@@ -1,19 +1,23 @@
+<script context="module">
+	export const load = async ({ fetch }) => {
+		let response = await fetch('https://fakestoreapi.com/products');
+		let data = await response.json();
+		if (response.ok) {
+			return {
+				props: {
+					items: data
+				}
+			};
+		}
+	};
+</script>
+
 <script>
 	import ItemCard from '../components/ItemCard.svelte';
-	import { onMount } from 'svelte';
 	import { cart } from '../stores/cart';
 	import { fade } from 'svelte/transition';
 
-	let data = [];
-
-	const getData = async () => {
-		let response = await fetch('https://fakestoreapi.com/products');
-		return await response.json();
-	};
-
-	onMount(async () => {
-		data = await getData();
-	});
+	export let items;
 
 	const removeItem = (item) => {
 		$cart = $cart.filter((x) => x.id !== item.id);
@@ -49,7 +53,7 @@
 		</details>
 	</div>
 	<div class="flex flex-col mx-auto max-w-3xl h-screen">
-		{#each data as item, i}
+		{#each items as item, i}
 			<ItemCard {item} />
 		{:else}
 			<p class="mx-auto" transition:fade>loading items...</p>
