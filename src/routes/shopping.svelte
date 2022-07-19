@@ -24,7 +24,7 @@
 	};
 </script>
 
-<div class="">
+<div class="mx-auto">
 	<div class="">
 		<details class="transtion-all mb-8">
 			<summary class="hover:cursor-pointer">cart: {$cart.length}</summary>
@@ -52,9 +52,9 @@
 			</p>
 		</details>
 	</div>
-	<div class="flex flex-col mx-auto max-w-3xl h-screen">
-		{#each items as item, i}
-			<ItemCard {item} />
+	<div class="flex flex-col mx-auto max-w-3xl">
+		{#each items as item}
+			<ItemCard {item} class="last:pb-16" />
 		{:else}
 			<p class="mx-auto" transition:fade>loading items...</p>
 		{/each}

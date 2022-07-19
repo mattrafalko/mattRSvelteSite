@@ -23,14 +23,15 @@
 <div
 	transition:fly={{ y: 100, duration: 500 }}
 	class="mb-6 border-2 border-green-500
-     hover:-translate-y-1
-     hover:scale-105    
-     hover:my-12
-    hover:border-pink-500 rounded-md flex flex-col max-w-md mx-auto transition-all"
+    hover:border-green-700 rounded-md flex flex-col max-w-md mx-auto transition-all"
 >
 	<div class="overflow-hidden w-full h-96">
 		<div class="image flex justify-center items-center" style="--image: url({item.image})" />
-		<img class=" mx-auto relative h-72" src={item.image} alt={item.description} />
+		<img
+			class=" mx-auto relative h-72 hover:scale-110 transition-all"
+			src={item.image}
+			alt={item.description}
+		/>
 	</div>
 	<div class="mt-2 p-3">
 		<h2 class="text-xl text-green-400">{item.title}</h2>
@@ -50,7 +51,7 @@
 		<div class="flex flex-row-reverse w-full">
 			<button
 				on:click={() => addToCart(item)}
-				class="px-2 text-sm py-1 rounded-full text-white bg-green-700 hover:bg-pink-500 transition-colors "
+				class="px-2 text-sm py-1 rounded-full text-white bg-green-700 hover:bg-green-500 transition-colors "
 				>add to cart</button
 			>
 		</div>
